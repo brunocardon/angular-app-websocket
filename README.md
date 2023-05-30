@@ -39,7 +39,6 @@ Each connection and communication with the client will create a new line in the 
 
 **Make sure you have PHP installed on your system before running the server.**
 
----
 
 ## Building and starting the Angular app
 
@@ -55,7 +54,6 @@ To access it across your local network, use the following syntax:
 
     http://<IP address of the server machine>:4200
 
----
 
 ## Testing
 Once everything is set up, the application provides a text field to send data to 
