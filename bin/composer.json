@@ -1,0 +1,16 @@
+{
+  "name": "brunocardon/angular-app-websocket-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunocardon/angular-app-websocket.git"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "src"
+    }
+  },
+  "require": {
+    "cboden/ratchet": "0.4.*",
+    "monolog/monolog": "^3.3"
+  }
+}
