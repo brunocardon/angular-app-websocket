@@ -1,3 +1,6 @@
+import { environmentModel } from './environment.model';
+
 export const environment = {
-    production: true
+    ...environmentModel,
+    production: true,
 };

@@ -1,3 +1,42 @@
-<router-outlet></router-outlet>
-<hr/>
-<h2>app.component.html</h2>
+<mat-toolbar color="primary">
+    <span>My App</span>
+</mat-toolbar>
+
+<section class="conent">
+    <div class="content-wrapper">
+
+        <h2>Chat with...</h2>
+        <mat-form-field class="example-full-width" color="primary">
+            <mat-label>Message</mat-label>
+            <textarea 
+                matInput 
+                #message 
+                maxlength="256" 
+                rows="7" 
+                placeholder="Ex. I need help with..." 
+
+                [(ngModel)]="chatMessage"
+            ></textarea>
+
+            <div align="end">
+                <button 
+                    mat-flat-button
+                    class="btn-send"
+                    color="primary"
+
+                    (click)="sendChat()"
+                >SEND</button>
+            </div>
+
+            <mat-hint>
+                <strong>Max chars: </strong> {{message.value.length}} / 256 
+            </mat-hint>
+        </mat-form-field>
+
+        <div class="log-wrapper">
+            <h3>Chat log</h3>
+            <textarea #textchatlog class="chat-log" rows="10" [(ngModel)]="chatLog"></textarea>
+            <span class="log-last">Last insert: <span>{{ chatLogLast }}</span></span>
+        </div>
+    </div>
+</section>

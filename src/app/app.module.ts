@@ -1,7 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { environment } from 'src/environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
 
@@ -10,12 +14,14 @@ import { AppComponent } from './app.component';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
+    ,BrowserAnimationsModule
+    ,FormsModule
+    ,MatInputModule
+    ,MatButtonModule
+    ,MatToolbarModule
   ],
-  providers: [
-    { provide: 'APP_ENVIRONMENT', useValue: environment }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
