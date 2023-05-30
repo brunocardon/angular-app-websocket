@@ -1,6 +1,10 @@
 {
   "name": "angular-app-websocket",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunocardon/angular-app-websocket.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

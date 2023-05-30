@@ -1,3 +1,4 @@
+import { Title } from "@angular/platform-browser";
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -15,9 +16,13 @@ export class AppComponent implements OnInit {
 
   @ViewChild('textchatlog') textchatlog!: ElementRef;
 
-  constructor() {}
+  constructor(private titleService:Title) {
+    this.titleService.setTitle(environment.applicationAuthor+" - "+environment.applicationTitle);
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(environment)
+  }
 
   ngAfterViewInit() {
     this.websocketConnectionInit();
