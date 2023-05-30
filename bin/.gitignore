@@ -1,9 +1,6 @@
 .idea/
 .vscode/
 
-#log file
-logs/
-
 # phpstorm project files
 .idea
 
